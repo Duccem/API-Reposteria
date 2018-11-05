@@ -1,0 +1,36 @@
+<div class="row">
+     <div class="col-md-5">
+          <div class="row start-xs">
+               <h4 class="col-md-12" style="text-align:left;">Filtre por precio {{selected}}</h4>
+               <mat-form-field class="col-md-12">
+                    <mat-select [(ngModel)]="selectedPrecio" (ngModelChange)="FilterMenu($event)">
+                         <mat-option value="0">none</mat-option>
+                         <mat-option *ngFor="let precio of precios" value="{{precio}}">< ${{precio}}</mat-option>
+                    </mat-select>
+               </mat-form-field>
+          </div>
+     </div>
+     <div class="col-md-2"></div>
+     <div class="col-md-5">
+          <div class="row">
+               <h4 class="col-md-12" style="text-align:left;">Busque su platillo favorito</h4>
+               <mat-form-field class="col-md-12">
+                    <input matInput type="text" placeholder="Nombre de un platillo" (keydown.enter)="BuscarPlatillo($event)"[(ngModel)]="value">
+                    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''; getMenus()">
+                        <mat-icon>close</mat-icon>
+                    </button>
+               </mat-form-field>
+          </div>
+     </div>
+</div>
+<div class="productos ">
+     <div class="row center-xs">
+          <div class="col-xs-10 col-sm-6 col-md-3 product animated fadeInDown delay-1" *ngFor="let menu of menuService.menus">
+               <div class="card cursor" (click)="openDialog(menu)">
+                    <img src="assets/png/{{menu.photo}}" alt="">
+                    <h3 class="pacifico">{{menu.name}}</h3>
+                    <p>${{menu.price}}USD</p>
+               </div>
+          </div>
+     </div>
+</div>

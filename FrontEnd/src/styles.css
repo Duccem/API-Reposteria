@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+     font-family: Roboto;
+}
+.white-background{
+     background-color: white;
+}
+.pacifico{
+     font-family: 'Pacifico',cursive;
+}
+.title{
+     font-size: 2.5em;
+     margin-top: 0;
+}
+.main-header{
+     background-color: #00887c;
+     padding-left: 15px;
+     padding-right: 15px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     border-radius: 4px;
+}
+.nav-link{
+     color: white;
+     margin-right: -4px;
+     text-decoration: none;
+     width: 33%;
+     display:inline-block;
+}
+.inline{
+     display: inline-block;
+}
+.text-center{
+     text-align: center;
+}
+.text-red{
+     color: red;
+}
+.cursor:hover{
+     cursor: pointer;
+}
+.text-verde{
+     color: #00887c;
+}
+.img-mediana{
+     width: 200px;
+}
+.main-container{
+     min-height: 100vh;
+}
+.product img{
+     width: 150px;
+}
+.product h3{
+     font-size: 1.7em;
+     margin-top: 5px;
+     margin-bottom: 5px;
+}
+.card{
+     border-radius: 4px;
+     background-color: white;
+     box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+}
+.body{
+     padding: 60px 15px;
+}
+.threeD{
+     text-shadow: 1px 3px 0px #6b251d,1px 13px 5px rgb(171,161,168);
+}
+.presentacion{
+     text-align:justify;
+     padding: 10px 10px;
+}
