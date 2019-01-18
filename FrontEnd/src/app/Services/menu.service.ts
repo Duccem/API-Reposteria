@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Menu } from '../models/menu';
-import { MenusComponent } from '../Components/menus/menus.component';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,12 +18,13 @@ export class MenuService {
      getMenus(){//retorna todos los menus
           return this.http.get(this.URL_API);
      }
+    /* getImage(){
+          return this.http.get('http://localhost:3000/public/apple.png',{ responseType: 'blob' });
+     }*/
      getMenusFilter(e:number){
-          console.log(e);
           return this.http.get(this.URL_API+'/filter/'+e);
      }
      getMenuByName(e:string){
-          console.log(e);
           return this.http.get(this.URL_API+'/menu/'+e);
      }
      postMenu(menu: Menu){//crea un menu nuevo

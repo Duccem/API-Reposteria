@@ -14,11 +14,32 @@ export class MenusComponent implements OnInit {
      constructor(private menuService:MenuService,private dialog: MatDialog) { }
      selectedPrecio:number;
      precios:number[] = [5,10,15,20,25];
-
+     imagen;
      ngOnInit() {
           this.getMenus();
+          //this.cargarImagen();
      }
-
+    /* cargarImagen(){
+          
+          this.menuService.getImage()
+               .subscribe(data =>{
+                    this.createImageFromBlob(data);
+                    //this.isImageLoading = false;
+               }, error =>{
+                    console.log(error);
+               });
+          //console.log(this.imagen.name);
+     }*/
+     /*createImageFromBlob(image: Blob) {
+          let reader = new FileReader();
+          reader.addEventListener("load", () => {
+             this.imagen = reader.result;
+          }, false);
+       
+          if (image) {
+             reader.readAsDataURL(image);
+          }
+       }*/
      getMenus(){
           this.menuService.getMenus()
                .subscribe(res =>{
