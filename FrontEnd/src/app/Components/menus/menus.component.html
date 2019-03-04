@@ -27,7 +27,7 @@
      <div class="row center-xs">
           <div class="col-xs-10 col-sm-6 col-md-3 product animated fadeInDown delay-1" *ngFor="let menu of menuService.menus">
                <div class="card cursor" (click)="openDialog(menu)">
-                    <img src="assets/png/{{menu.photo}}" alt="">
+                    <img src="/img/{{menu.photo}}" alt="">
                     <h3 class="pacifico">{{menu.name}}</h3>
                     <p>${{menu.price}}USD</p>
                </div>

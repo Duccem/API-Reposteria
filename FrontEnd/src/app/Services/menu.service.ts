@@ -8,7 +8,7 @@ import { Menu } from '../models/menu';
 export class MenuService {
      selectedMenu: Menu;//el menu seleccionado
      menus: Menu[];//arreglo de menus devuelto
-     readonly URL_API = 'http://localhost:3000/api/menu';//URL de la URL_API
+     readonly URL_API = '/api/menu';//URL de la URL_API
 
      //Contructor
      constructor(private http: HttpClient) {
